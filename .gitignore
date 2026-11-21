@@ -4,3 +4,9 @@ __pycache__/
 .env
 .idea/
 .vscode/
+
+# 원본·전처리 데이터와 평가 원본 결과는 커밋하지 않음
+data_raw/
+data_processed/*
+!data_processed/.gitkeep
+results/evaluation/

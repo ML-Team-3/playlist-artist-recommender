@@ -10,6 +10,17 @@ This project aims to recommend artists based on playlists using the Kakao Arena 
 | 김택현, 김진서 | Model Implementation |
 | 박현서 | Evaluation & Validation |
 
+## Data preprocessing
+
+Download `train.json`, `song_meta.json` and `genre_gn_all.json` from the official [Melon Playlist Dataset page](https://kakao.github.io/recoteam/arena/melon) into `data_raw/`. These three files are enough for preprocessing; the `data/playlist_input.py` demo also needs `val.json` in `data_raw/`. Then run from the repository root with Python 3.12, NumPy, SciPy and scikit-learn 1.6:
+
+```bash
+python data/preprocess.py      # writes data_processed/ (seed 42, about 30 s)
+python data/playlist_input.py  # self-check + converts one val.json playlist to model input
+```
+
+`data_processed/feature_spec.md` (created by the script) describes every output file. `data_raw/`, `data_processed/` and `results/evaluation/` are git-ignored, so data and raw evaluation outputs are never committed.
+
 ## Item-based collaborative filtering
 
 Model code lives in `models/item_based/`, and the trained model lives in `results/item_based/`. The content-based model can use `models/content_based/` and `results/content_based/`.
