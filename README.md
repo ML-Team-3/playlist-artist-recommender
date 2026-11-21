@@ -12,7 +12,7 @@ This project aims to recommend artists based on playlists using the Kakao Arena 
 
 ## Data preprocessing
 
-Download `train.json`, `song_meta.json` and `genre_gn_all.json` from the [Kakao Arena Melon Playlist Dataset](https://arena.kakao.com/c/8) into `data_raw/`, then run from the repository root with Python 3.12, NumPy, SciPy and scikit-learn 1.6:
+Download `train.json`, `song_meta.json` and `genre_gn_all.json` from the official [Melon Playlist Dataset page](https://kakao.github.io/recoteam/arena/melon) into `data_raw/`. These three files are enough for preprocessing; the `data/playlist_input.py` demo also needs `val.json` in `data_raw/`. Then run from the repository root with Python 3.12, NumPy, SciPy and scikit-learn 1.6:
 
 ```bash
 python data/preprocess.py      # writes data_processed/ (seed 42, about 30 s)

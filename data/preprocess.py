@@ -5,7 +5,7 @@
 입력: data_raw/ (Kakao Arena에서 받은 train.json, song_meta.json, genre_gn_all.json)
 출력: data_processed/ (파일 설명은 실행 후 생성되는 feature_spec.md 참고)
 
-데이터 출처: Kakao Arena Melon Playlist Dataset (https://arena.kakao.com/c/8)
+데이터 출처: Kakao Arena Melon Playlist Dataset (https://kakao.github.io/recoteam/arena/melon)
 팀 결정 사항 (2026-11-02):
   - 분할: 플레이리스트 단위로 train 80 / dev 10 / test 10 (팀 제안서 방식)
   - dev/test 플레이리스트에서 아티스트 20%(최소 1명)를 정답으로 숨김
